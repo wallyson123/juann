@@ -55,3 +55,8 @@ pie_chart_home = alt.Chart(filtered_df).mark_arc().encode(
     tooltip=['Home_Percentage']
 ).interactive()
 st.altair_chart(pie_chart_home, use_container_width=True)
+
+# Tabela com a contagem total de penalidades por nome
+st.sidebar.subheader("Contagem Total de Penalidades por Nome")
+penalties_count_per_name = df.groupby('Name')['Count'].sum().reset_index()
+st.sidebar.table(penalties_count_per_name)
