@@ -31,7 +31,7 @@ st.write(f"Número Total de Colunas: {num_columns}")
 st.write(f"Quantidade Geral de Penalidades: {total_penalties}")
 
 # Gráfico de barras para contagem de penalidades por time
-st.write("Contagem de Penalidades por Time:")
+st.write("Contagem de Penalidades por Nome:")
 penalty_counts = filtered_data.groupby("Name")["Count"].sum().sort_values(ascending=False)
 st.bar_chart(penalty_counts)
 
