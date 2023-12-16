@@ -7,8 +7,8 @@ file_path = "penalties.csv"
 df = pd.read_csv(file_path)
 
 # Criar novas colunas para percentual de jardas em casa e fora
-df['Home_Yards'] = df['Home_Yards'] / df['Yards']
-df['Away_Yards'] = df['Away_Yards'] / df['Yards']
+df['Home_Yards'] = df['Home_Count'] / df['Yards']
+df['Away_Yards'] = df['Away_Count'] / df['Yards']
 
 # Criar novas colunas para percentual de contagem em casa e fora
 df['Home_Percentage'] = df['Home_Count'] / df['Count']
